@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLy — Панель Администратора</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+    <header>
+        <nav class="navbar navbar-admin">
+            <a href="index.html" class="logo logo-admin">CoLy <span class="admin-label">Шеф</span></a>
+            <ul class="nav-links">
+                <li><a href="admin.html" class="active">Дашборд</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="index.html" class="btn-login logout-btn">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="admin-header">
+            <h1>Панель управления CoLy</h1>
+            <p>Добро пожаловать, Шеф! Статистика на сегодня.</p>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">☕</div>
+                <div class="stat-value">48</div>
+                <div class="stat-desc">Заказов сегодня</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-value">12 450 ₽</div>
+                <div class="stat-desc">Выручка</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-value">15</div>
+                <div class="stat-desc">Новых гостей</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📶</div>
+                <div class="stat-value">Optimal</div>
+                <div class="stat-desc">Статус ИИ DNS</div>
+            </div>
+        </div>
+
+        <div class="admin-main-flex">
+            <section class="admin-orders-section">
+                <h2>Последние заказы</h2>
+                <table class="orders-table admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Столик / Клиент</th>
+                            <th>Заказ</th>
+                            <th>Сумма</th>
+                            <th>Статус</th>
+                            <th>Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#123</td>
+                            <td>Студент №3</td>
+                            <td>Нейро-Раф, Сендвич</td>
+                            <td>550 ₽</td>
+                            <td><span class="status-paid">Оплачен</span></td>
+                            <td><button class="action-btn small">Завершить</button></td>
+                        </tr>
+                        <tr>
+                            <td>#124</td>
+                            <td>Семья (стол 5)</td>
+                            <td>2х Лавандовый Латте, 3х Кроунат</td>
+                            <td>1 200 ₽</td>
+                            <td><span class="status-cooking">Готовится</span></td>
+                            <td><button class="action-btn small">Готов!</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <aside class="admin-actions">
+                <h2>Быстрые действия</h2>
+                <div class="actions-buttons">
+                    <button class="cta-button action-btn-primary">Добавить блюдо</button>
+                    <button class="cta-button action-btn-primary">Создать акцию</button>
+                    <button class="cta-button action-btn-secondary">Посмотреть тикеты (3)</button>
+                    <button class="cta-button action-btn-danger">Экстренное отключение Wi-Fi</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer-clean">
+        <div class="footer-line"></div>
+        <div class="footer-bottom">
+            <span class="logo-small logo-footer-admin">CoLy Шеф Панель</span>
+            <span class="copyright">© 2026 CoLy Coffee.</span>
+        </div>
+    </footer>
+</body>
+</html>

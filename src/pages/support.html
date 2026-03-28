@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLy — Поддержка</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CoLy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="support.html" class="active">Поддержка</a></li>
+                <li><a href="login.html" class="btn-login">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="support-container">
+        <div class="support-header">
+            <h1>Центр помощи CoLy</h1>
+            <p>У вас возникли вопросы? Мы подготовили подробные ответы на самые частые из них.</p>
+        </div>
+
+        <section class="faq-section">
+            <div class="faq-item">
+                <h3>Как работает ваш "AI-DNS"?</h3>
+                <p>Наши сервера используют кастомные настройки маршрутизации, которые позволяют обращаться к серверам OpenAI, Claude и Midjourney напрямую с максимальной скоростью, минуя стандартные ограничения провайдеров.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Есть ли у вас розетки у каждого стола?</h3>
+                <p>Безусловно. Каждый столик оборудован двумя розетками 220V и портами USB-C для быстрой зарядки ваших гаджетов.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Как заказать зерно домой?</h3>
+                <p>Вы можете сделать это через наше меню в разделе "Зерно" или попросить бариста на месте. Мы обжариваем лоты каждую неделю.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Проводите ли вы мастер-классы?</h3>
+                <p>Да! Каждую субботу мы проводим "AI & Coffee Morning", где учим пользоваться нейросетями за чашкой каппинга.</p>
+            </div>
+        </section>
+
+        <div class="contact-form-card">
+            <h3>Остались вопросы? Пишите!</h3>
+            <form id="supportForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Опишите вашу проблему или предложите идею для улучшения кофейни..." rows="5" required></textarea>
+                <button type="submit" class="cta-button" style="width: 100%;">Отправить запрос</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('supportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Ваше сообщение отправлено! Мы свяжемся с вами в течение 15 минут.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

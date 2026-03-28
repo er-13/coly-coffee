@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLy — Личный кабинет</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CoLy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="support.html">Поддержка</a></li>
+                <li><a href="login.html" class="active btn-login">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <section class="profile-header">
+            <h1>Рады видеть вас, <span id="user-name-display">Гость</span>!</h1>
+            <p>Ваш статус: <span class="status-badge">AI-Explorer</span></p>
+        </section>
+
+        <div class="profile-grid">
+            <div class="profile-card loyalty-card">
+                <h3>Программа лояльности</h3>
+                <p>До бесплатной 7-й чашки осталось:</p>
+                <div class="cup-progress">
+                    <span class="cup filled">☕</span>
+                    <span class="cup filled">☕</span>
+                    <span class="cup filled">☕</span>
+                    <span class="cup">☕</span>
+                    <span class="cup">☕</span>
+                    <span class="cup">☕</span>
+                    <span class="cup-gift">🎁</span>
+                </div>
+                <p class="small-text">Куплено чашек: 3 / 7</p>
+            </div>
+
+            <div class="profile-card net-status-card">
+                <h3>Ваш доступ к сети</h3>
+                <div class="net-info">
+                    <div class="info-row"><span>Сеть:</span> <strong>CoLy_Privileged</strong></div>
+                    <div class="info-row"><span>Скорость:</span> <strong>500 Mbps</strong></div>
+                    <div class="info-row"><span>AI DNS:</span> <strong style="color: var(--mint-primary);">Активен</strong></div>
+                </div>
+                <button class="cta-button" style="width: 100%; margin-top: 15px; padding: 10px;">Сгенерировать новый пароль</button>
+            </div>
+        </div>
+
+        <section class="recent-orders">
+            <h3>Последние заказы</h3>
+            <table class="orders-table">
+                <tr>
+                    <th>Дата</th>
+                    <th>Заказ</th>
+                    <th>Сумма</th>
+                </tr>
+                <tr>
+                    <td>25.03.2026</td>
+                    <td>Нейро-Раф, Круассан</td>
+                    <td>540 ₽</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        // Простая проверка имени из localStorage (если сохраняли при входе)
+        const savedName = localStorage.getItem('coly_user');
+        if (savedName) {
+            document.getElementById('user-name-display').innerText = savedName;
+        }
+    </script>
+</body>
+</html>

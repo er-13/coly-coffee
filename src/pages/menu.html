@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLy — Меню</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CoLy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html" class="active">Меню</a></li>
+                <li><a href="support.html">Поддержка</a></li>
+                <li><a href="login.html" class="btn-login">Вход / Кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <h2 class="section-title">Наше Меню</h2>
+            <div class="menu-grid">
+                
+                <div class="menu-item" onclick="openModal('modal-raf')">
+                    <div class="item-image-wrapper">
+                        <img src="../../public/images/menu_neuro_raf.jpg" alt="Нейро-Раф">
+                        <div class="hover-overlay">
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Нейро-Раф</h3>
+                        <p class="price">350 ₽</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" onclick="openModal('modal-avocado')">
+                    <div class="item-image-wrapper">
+                        <img src="../../public/images/menu_avocado_toast.jpg" alt="Брускетта">
+                        <div class="hover-overlay">
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Брускетта с авокадо</h3>
+                        <p class="price">420 ₽</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-raf" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-raf')">&times;</span>
+            <div class="modal-body">
+                <img src="../../public/images/menu_neuro_raf.jpg" class="modal-img" alt="Нейро-Раф">
+                <div class="modal-text">
+                    <h2>Нейро-Раф</h2>
+                    <p class="desc">Авторский напиток на основе сливок, лавандового сиропа и секретного ингредиента для концентрации внимания. Идеально для работы с кодом.</p>
+                    <p class="kbju">КБЖУ: 280 / 4 / 18 / 25</p>
+                    <button class="order-btn" onclick="addToCart('Нейро-Раф')">Добавить в заказ (350 ₽)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-avocado" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-avocado')">&times;</span>
+            <div class="modal-body">
+                <img src="../../public/images/menu_avocado_toast.jpg" class="modal-img" alt="Брускетта">
+                <div class="modal-text">
+                    <h2>Брускетта с авокадо</h2>
+                    <p class="desc">Хрустящий ремесленный хлеб, нежный крем из спелого авокадо, яйцо пашот и микрозелень. Сытный перекус для продуктивного дня.</p>
+                    <p class="kbju">КБЖУ: 320 / 12 / 20 / 28</p>
+                    <button class="order-btn" onclick="addToCart('Брускетта с авокадо')">Добавить в заказ (420 ₽)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

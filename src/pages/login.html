@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLy — Вход</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="background: var(--mint-light);">
+    <header>
+        <nav class="navbar">
+            <div class="logo">CoLy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="login.html" class="active btn-login">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="auth-section">
+        <div class="login-card">
+            <h2>Авторизация</h2>
+            <p>Войдите в свой аккаунт CoLy</p>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Логин (или ваш ник)" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit" class="cta-button" style="width: 100%;">Войти</button>
+            </form>
+            <p id="error-msg" style="color: #e74c3c; display: none; margin-top: 15px; font-weight: bold;">Неверный логин или пароль</p>
+        </div>
+    </section>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>
